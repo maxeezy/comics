@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 18 2019 г., 09:58
--- Версия сервера: 5.7.25
--- Версия PHP: 7.3.9
+-- Время создания: Дек 19 2019 г., 00:45
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -95,6 +95,7 @@ CREATE TABLE `goods` (
   `id_publisher` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_category` int(11) NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -102,10 +103,10 @@ CREATE TABLE `goods` (
 -- Дамп данных таблицы `goods`
 --
 
-INSERT INTO `goods` (`id`, `id_publisher`, `name`, `id_category`, `price`) VALUES
-(6, 1, 'Бэтмен', 2, '359'),
-(7, 1, 'Человек паук', 1, '268'),
-(8, 2, 'Черная смэрть', 1, '1432');
+INSERT INTO `goods` (`id`, `id_publisher`, `name`, `id_category`, `img`, `price`) VALUES
+(6, 1, 'Бэтмен', 2, 'https://static-eu.insales.ru/images/products/1/2190/142436494/yNagRM0gxzg.jpg', '359'),
+(7, 1, 'Человек паук', 1, 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj8v_zc8L_mAhWs5KYKHTQ5CpwQjRx6BAgBEAQ&url=http%3A%2F%2Funicomics.ru%2Fcomics%2Fonline%2Famazing-spider-man-523&psig=AOvVaw03ldtU9GSEngvjgnYxreKm&ust=1576781953089738\r\n', '268'),
+(8, 2, 'Черная смэрть', 1, 'https://steamuserimages-a.akamaihd.net/ugc/947344415646334455/9D8368AC87ACBB4E36FCF86378241626C3D07BFC/', '1432');
 
 -- --------------------------------------------------------
 
