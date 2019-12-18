@@ -9,7 +9,6 @@ function otprav(form) {
 
     xhr.open("POST", 'http://comics-shop/php/reg2.php', true);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
     xhr.send(json);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {

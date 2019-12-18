@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+}
+.header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+}
+.goods{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.wrap{
+    width: 1260px;
+    margin: 0 auto;
+    background-color: grey;
+}
+.good{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;;
+}
+.good-title{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.good-price{
+    margin-bottom: 10px;
+}
+.good-img{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 10px;
+}
+.button{
+    width: 60%;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border: 1px transparent;
+    box-sizing: border-box;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.footer{
+    background-color: #1a1a1a;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}

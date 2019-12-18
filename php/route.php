@@ -29,3 +29,7 @@ function perebor($err)
     foreach ($err as $item)
         echo $item;
 }
+function zapros($que){
+    $mysql=createMysql();
+    return $mysql->query($que);
+}
