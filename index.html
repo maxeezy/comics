@@ -1,18 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/output_goods.js"></script>
+
+    <link rel="stylesheet" href="style/st.css">
     <link rel="stylesheet" href="style/st2.css">
+
 </head>
 <body>
 <header class="header">
+    <div class="wrap">
+        <div class="wrap-auto-reg">
 
+            <div  class="aut-but" style="color: white;display: flex">Авторизироваться</div>
 
-<a href="/html/registration.html">Зарегистрироваться</a>
-<a href="/html/auto.html">Войти</a>
+            <div class="reg-but" style="color: white;display: flex">Зарегистрироваться</div>
+        </div>
+        <div class="reg">
+            <form action="../php/reg2.php" method="post" class="form-reg">
+                <div class="wrap-reg">
+                    <input type="text" name="login" placeholder="Введите логин">
+                    <input type="email" name="mail" placeholder="Введите mail ">
+                    <input type="password" name="password" placeholder="Введите пароль">
+                    <input type="button" value="Отправить" onclick="otprav(this.form)" class="subm">
+                    <div class="field-1"></div>
+                </div>
+
+            </form>
+        </div>
+        <div class="autoriz">
+            <form action="../php/autoriz.php" method="post" class="form-autoriz">
+                <div class="wrap-aut">
+                    <input type="text" name="login" placeholder="Введите логин">
+                    <input type="password" name="password" placeholder="Введите пароль">
+                    <input type="button" value="Отправить"  class="subm" onclick="otprav2(this.form)">
+                    <div class="field-2"></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
 </header>
 <div class="main-cont">
     <div class="wrap">
@@ -20,6 +49,8 @@
     </div>
 </div>
 <footer class="footer"></footer>
+<script src="js/js_reg_auto.js" type="text/javascript"></script>
+<script src="js/disign.js"></script>
 </body>
 </html>
 

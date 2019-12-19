@@ -33,7 +33,7 @@ function error_output_reg(result) {
         //     err_field.insertAdjacentHTML("beforeend", "<p class='good'>" + result[i] + "</p>");
         // }
         if (result[i]==="Вы зарегестрированы. Можете залогинится"){
-            err_field.insertAdjacentHTML("beforeend", "<p class='good'>" + result[i] + "</p>");
+            err_field.insertAdjacentHTML("beforeend", "<p class='ok'>" + result[i] + "</p>");
         }
         else {
             err_field.insertAdjacentHTML("beforeend", "<p class='error'>" + result[i] + "</p>");

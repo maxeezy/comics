@@ -6,9 +6,19 @@
     padding-bottom: 50px;
     background-color: black;
 }
+.form-reg{
+    display: none;
+}
+.form-autoriz{
+    display: none;
+}
 .goods{
     display: flex;
     flex-wrap: wrap;
+
+}
+.wrap-auto-reg{
+    display: flex;
 
 }
 .wrap{
@@ -33,7 +43,7 @@
 }
 .good-img{
     width: 40%;
-    height: 40%;
+    height: 50%;
     margin-bottom: 10px;
 }
 .button{
