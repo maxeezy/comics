@@ -58,8 +58,12 @@ function otprav2(form) {
             let result = JSON.parse(xhr.responseText);
             console.log(result);
             error_output_aut(result);
+            if(result.length ===0){
+                location.reload();
+            }
+
             result = null;
-            location.reload();
+
         }
 
     };

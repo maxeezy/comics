@@ -29,12 +29,24 @@ if (empty($inputData['price'])) {
 }
 if (empty($inputData['isbn'])) {
     array_push($err, "Не введены данные в поле мэйл");
-
 }
+if(is_int($inputData['publisher_id'])){
+    array_push($err, "Айди издателя должен быть числом");
+}
+if(is_int($inputData['category_id'])){
+    array_push($err, "Айди категории должен быть числом");
+}
+if(is_int($inputData['price'])){
+    array_push($err, "Цена должна быть числом");
+}
+
 if (empty($err)){
-    $query = "INSERT INTO `goods`(`id`, `id_publisher`, `name`, `id_category`, `img`, `discription`, `price`) VALUES (NULL,'" . "\"" . $inputData['publisher_id'] . "\"'," . "\"" . $inputData['good_name'] . "\"," . "\"" . $inputData['category_id'] . "\"," . "\"" . $inputData['img'] . "\"," . "\"" . $inputData['discription'] . "\"," . "\"" . $inputData['price'] . "\")";
+    $good= [];
+    $query = "INSERT INTO `goods`(`id`, `id_publisher`, `name`, `id_category`, `img`, `discription`, `price`) VALUES (NULL,'{$inputData['publisher_id']}','{$inputData['good_name']}','{$inputData['category_id']}','{$inputData['img']}','{$inputData['discription']}','{$inputData['price']}')";
     zapros($query);
-    print json_encode("Успешно добавлено");
+    zapros("INSERT INTO `isbn`(`id_goods`, `isbn`) VALUES (SELECT `id` FROM `goods` WHERE `name`='{$inputData['good_name']}','{$inputData['isbn']}')");
+    array_push($good, "Товар добавлен");
+    print json_encode($good);
 }
 else{
     print json_encode($err);

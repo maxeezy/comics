@@ -71,7 +71,9 @@
 </div><div class='input-wrap'><div class='input-admin-title'>Введите id издателя</div><input type='text' class='input-admin' name='publisher_id'></div><div class='input-wrap'><div class='input-admin-title'>Введите id категории</div><input type='text' class='input-admin' name='category_id'></div><div class='input-wrap'><div class='input-admin-title'>Введите ссылку на картинку</div><input type='text' class='input-admin' name='img'></div><div class='input-wrap'><div class='input-admin-title'>Введите описание товара</div><input type='text' class='input-admin' name='discription'></div><div class='input-wrap'><div class='input-admin-title'>Введите цену товара</div>
 <input type='text' class='input-admin' name='price'></div><div class='input-wrap'><div class='input-admin-title'>Ввежите ISBN</div><input type='text' class='input-admin' name='isbn'></div><div class='input-wrap'><input type='button' class='input-admin' value='Отправить' onclick='send(this.form)'></div>
 </div></form><div class='field_otchet'></div>";
-            } ?>
+            }{
+                echo "<div class='account-name'>Здравствуйте " . $_SESSION['logged_user']['login'] . "</div><div>Ваш мэйл " .$_SESSION['logged_user']['mail']."</div>";
+            }?>
         </div>
     </div>
 </div>

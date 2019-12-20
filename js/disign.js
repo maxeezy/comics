@@ -73,6 +73,7 @@ function send(form) {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             let result = JSON.parse(xhr.responseText);
             console.log(result);
+            //console.log(xhr.responseText);
         }
     };
 }

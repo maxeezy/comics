@@ -17,7 +17,6 @@ $err = [];
         //$zP= "SELECT 'token' FROM `users` WHERE `login` =" . "\"" . $_POST['login'] . "\"";
         if(password_verify($inputData['password'],$us['password'])){
             $_SESSION['logged_user']=$us;
-            $err[]="Все кул";
         }
         else {
             $err[] = "<div style='color: red'>Неверный пороль</div>";
@@ -27,5 +26,5 @@ $err = [];
         $err[] = "<div style='color: red'>Пользователя с таким логином не существует</div>";
     }
 
-print(json_encode($us));
+print(json_encode($err));
 ?>
