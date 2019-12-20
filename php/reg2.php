@@ -43,7 +43,7 @@ if (empty($err)) {
     $password = $inputData['password'];
     registr($login, $mail, $password);
     array_push($err, "Вы зарегестрированы. Можете залогинится");
-    // $err[] = "<button class='button'><a href=\"../index.html\">Перейти на главную</a></button>" . "<br>";
+    // $err[] = "<button class='button'><a href=\"../index.php\">Перейти на главную</a></button>" . "<br>";
 }
 
 print(json_encode($err));

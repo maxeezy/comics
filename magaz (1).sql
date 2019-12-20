@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 19 2019 г., 12:56
--- Версия сервера: 5.7.25
--- Версия PHP: 7.3.9
+-- Время создания: Дек 20 2019 г., 11:21
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -96,6 +96,7 @@ CREATE TABLE `goods` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_category` int(11) NOT NULL,
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `discription` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -103,10 +104,10 @@ CREATE TABLE `goods` (
 -- Дамп данных таблицы `goods`
 --
 
-INSERT INTO `goods` (`id`, `id_publisher`, `name`, `id_category`, `img`, `price`) VALUES
-(6, 1, 'Бэтмен', 2, 'https://static-eu.insales.ru/images/products/1/2190/142436494/yNagRM0gxzg.jpg', '359'),
-(7, 1, 'Человек паук', 1, 'http://img1.unicomics.com/comics/amazing-spider-man/amazing-spider-man-523/01.jpg', '268'),
-(8, 2, 'Черная смэрть', 1, 'https://steamuserimages-a.akamaihd.net/ugc/947344415646334455/9D8368AC87ACBB4E36FCF86378241626C3D07BFC/', '1432');
+INSERT INTO `goods` (`id`, `id_publisher`, `name`, `id_category`, `img`, `discription`, `price`) VALUES
+(6, 1, 'Бэтмен', 2, 'https://static-eu.insales.ru/images/products/1/2190/142436494/yNagRM0gxzg.jpg', 'Брюсу Уэйну суждено стать легендой, но пока он просто хочет сделать свой город лучше. Что заставило его надеть маску и в первый раз выйти на мрачные и жестокие улицы Готэма? И что делать честному полицейскому Джиму Гордону — стремиться изменить мир к лучшему или стать частью коррумпированной системы? “Бэтмен. Год первый” — стал одним из ключевых сюжетов для графических историй, после которого не только комиксы о Бэтмене, но и вся супергероика взяла курс на мрачность и серьезность. В российское издание входит полная версия графического романа “Бэтмен. Год первый”, а также многочисленные дополнительные материалы: страницы сценария Фрэнка Миллера, зарисовки и наброски Дэвида Мацукелли, предисловие от обоих авторов.', '359'),
+(7, 1, 'Человек паук', 1, 'http://img1.unicomics.com/comics/amazing-spider-man/amazing-spider-man-523/01.jpg', 'В 1962 году мир впервые познакомился с Человеком-Пауком. Перед читателями предстал не просто очередной герой в маске — за маской скрывался обычный школьник Питер Паркер, со своими проблемами и стремлениями, на которого однажды свалилась великая ноша силы и ответственности. Такой подход к герою не только снискал любовь читателей, но дал совершенно новую жизнь всему издательству Marvel. Благодаря комиксу “Классика Marvel. Удивительный Человек-Паук” у вас есть возможность узнать о первых приключениях любимого героя.', '268'),
+(8, 2, 'Черная смэрть', 1, 'https://steamuserimages-a.akamaihd.net/ugc/947344415646334455/9D8368AC87ACBB4E36FCF86378241626C3D07BFC/', 'Никакого «Смертоносного Защитника». Никакого «Космического Рыцаря». Настало время для нового Венома. Как здорово быть плохим! Но вот он опять на Земле, и кто же с ним соединился — и превратился в клыкастое склизкое чудище? Пока симбиот вспоминает старые фокусы, погрузитесь в самую убийственную из историй о Веноме! В ней участвуют его старые приятели вроде Мака Гаргана, Скорпиона! И один бывший носитель Венома, известный паутинник, стенолаз и остряк! О да, мы ещё не видели такой жаркой схватки между Веномом и Человеком-Пауком! Захочется продолжения. ', '1432');
 
 -- --------------------------------------------------------
 
@@ -157,18 +158,20 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `mail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `login` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rank` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `user`
 --
 
-INSERT INTO `user` (`id`, `mail`, `login`, `password`) VALUES
-(27, 'vasia@mail.ru', 'vasia', '123456'),
-(28, 'ne_vasia@mail.RU', 'ne_vasia', '1234567'),
-(29, 'qwerty@mail.ru', 'qwerty', '12345678'),
-(30, 'molodoy@mail.ru', 'molodoy', '$2y$10$M3KV7ac8XYWZElgMS8.0tO03.O4LoboPjxFUvCLkkm02wvhgPFNnG');
+INSERT INTO `user` (`id`, `mail`, `login`, `password`, `rank`) VALUES
+(27, 'vasia@mail.ru', 'vasia', '123456', 'user'),
+(28, 'ne_vasia@mail.RU', 'ne_vasia', '1234567', 'user'),
+(29, 'qwerty@mail.ru', 'qwerty', '12345678', 'user'),
+(30, 'molodoy@mail.ru', 'molodoy', '$2y$10$M3KV7ac8XYWZElgMS8.0tO03.O4LoboPjxFUvCLkkm02wvhgPFNnG', 'user'),
+(31, 'user@mail.ru', 'user12', '$2y$10$SDl4/xWdLkRjQhHzWd2LV.BvD9eaa5cZsgMzrGbnexAu2ww3SpeqO', 'admin');
 
 -- --------------------------------------------------------
 
@@ -188,7 +191,10 @@ CREATE TABLE `user_sale` (
 INSERT INTO `user_sale` (`user_id`, `goods_id`) VALUES
 (27, 6),
 (27, 6),
-(27, 8);
+(27, 8),
+(27, 6),
+(27, 6),
+(27, 7);
 
 --
 -- Индексы сохранённых таблиц
@@ -260,7 +266,7 @@ ALTER TABLE `goods`
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

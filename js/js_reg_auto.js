@@ -16,13 +16,14 @@ function otprav(form) {
             console.log(result);
             error_output_reg(result);
             result = null;
+
         }
 
     };
 }
 
 function error_output_reg(result) {
-    var err_field = document.querySelector('.field');
+    var err_field = document.querySelector('.field-1');
     while (err_field.firstChild){
         err_field.removeChild(err_field.firstChild);
     }
@@ -58,12 +59,13 @@ function otprav2(form) {
             console.log(result);
             error_output_aut(result);
             result = null;
+            location.reload();
         }
 
     };
 }
 function error_output_aut(result) {
-    var err_field = document.querySelector('.field');
+    var err_field = document.querySelector('.field-2');
     while (err_field.firstChild){
         err_field.removeChild(err_field.firstChild);
     }
