@@ -98,3 +98,20 @@ input {
     margin-left: 10px;
     cursor: pointer;
 }
+.krest2{
+    position: relative;
+    bottom: 334px;
+    left: 167px;
+}
+.krest{
+    position: relative;
+    bottom: 359px;
+    left: 167px;
+}
+.krest2>img
+,.krest>img{
+    position: relative;
+    height: 24px;
+    cursor: pointer
+
+}

@@ -77,4 +77,34 @@ function send(form) {
         }
     };
 }
+if(document.querySelector('.krest')!==null){
+    document.querySelector('.krest').onclick=function () {
+        let knopka = document.querySelector('.form-reg');
+
+        if (knopka.style.display==="none"){
+
+            knopka.style.display="block";
+        }
+        else{
+
+            knopka.style.display="none";
+        }
+
+    };
+}
+if(document.querySelector('.krest2')!==null){
+    document.querySelector('.krest2').onclick=function () {
+        let knopka = document.querySelector('.form-autoriz');
+
+        if (knopka.style.display==="none"){
+
+            knopka.style.display="block";
+        }
+        else{
+
+            knopka.style.display="none";
+        }
+
+    };
+}
 

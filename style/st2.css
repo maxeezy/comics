@@ -71,7 +71,8 @@ a{
     width: 30%;
     align-items: center;
     cursor: pointer;
-    justify-content: center;;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 .good>a{
     display: contents;
@@ -79,6 +80,7 @@ a{
 .good-title{
     font-size: 25px;
     margin-bottom: 10px;
+    text-align: center;
 }
 .good-price{
     margin-bottom: 10px;
@@ -139,4 +141,7 @@ a{
     margin-top: 12px;
     margin-bottom: 6px;
     font-weight: bold;
+}
+.main-account{
+    min-height: 79vh;
 }

@@ -7,7 +7,7 @@ function view_all() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             let result = JSON.parse(xhr.responseText);
-            console.log(result);
+            //console.log(result);
             for (let i = 0; i < result.length; i++) {
                 document.querySelector('.goods').insertAdjacentHTML("beforeend", "<div class='good'><a href='http://comics-shop/item.php?id=" + result[i]['good_id'] + "'><img class='good-img' src='" + result[i]['img'] + "' id='" + result[i]['good_id'] + "' ></a><div class='good-title'>" + result[i]['goods_name'] + "</div><div class='good-price'>" + result[i]['price'] + " РУБ.</div><button class='button' onclick='ToKorzina(" + result[i]['good_id'] + ")'>В корзину</button></div>");
 
@@ -20,7 +20,7 @@ function view_all() {
 }
 
 function ToKorzina(good_id) {
-    console.log(good_id);
+    //console.log(good_id);
     fetch("http://comics-shop/php/ToKorzina.php", {
         method: 'POST',
         headers: {

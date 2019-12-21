@@ -12,7 +12,7 @@
 <header class="header">
 
         <div class="header-logo">
-            <span style="color: red">MARVEL</span>&<span style="color:dodgerblue;">DC</span>
+            MARVEL&DC
         </div>
     <div class="wrap">
         <div class="header-nav-wrap">
@@ -40,7 +40,6 @@
                     <input type="password" name="password" placeholder="Введите пароль">
                     <input type="button" value="Зарегистрироваться" onclick="otprav(this.form)" class="subm">
                     <div class="field-1"></div>
-                    <div class="krest" ><img src="img/14.png"></div>
                 </div>
 
             </form>
@@ -52,17 +51,15 @@
                     <input type="password" name="password" placeholder="Введите пароль">
                     <input type="button" value="Залогиниться" class="subm" onclick="otprav2(this.form)">
                     <div class="field-2"></div>
-                    <div class="krest2" ><img src="img/14.png"></div>
                 </div>
             </form>
 
         </div>
     </div>
 </header>
-<div class="main-cont">
+<div class="main-korz">
     <div class="wrap">
-        <script>view_all();</script>
-        <div class="goods"></div>
+
     </div>
 </div>
 <footer class="footer"></footer>
@@ -71,4 +68,3 @@
 <script src="js/disign.js"></script>
 </body>
 </html>
-

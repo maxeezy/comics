@@ -12,13 +12,13 @@
 <header class="header">
 
     <div class="header-logo">
-        MARVEL&DC
+        <span style="color: red">MARVEL</span>&<span style="color:dodgerblue;">DC</span>
     </div>
     <div class="wrap">
         <div class="header-nav-wrap">
             <div class="header-nav">
-                <a href="#" class="nav-x">Главная</a>
-                <a href="#" class="nav-x">Каталог Товаров</a>
+                <a href="http://comics-shop/" class="nav-x">Главная</a>
+                <a href="#" class="nav-x">Каталог  товаров</a>
                 <a href="#" class="nav-x">Акции</a>
                 <a href="#" class="nav-x">Доставка</a>
                 <a href="#" class="nav-x">Акции</a>
